@@ -81,7 +81,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Filter By Name(CIS) : %@",[array filteredArrayUsingPredicate:filterByNameCIS]);
         
         // *** Find movies except given ids ***
-        NSPredicate *filterByNotInIds = [NSPredicate predicateWithFormat:@"NOT (self.id IN %@)",@[@"7CDF6D22-8D36-49C2-84FE-E31EECCECB79", @"7CDF6D22-8D36-49C2-84FE-E31EECCECB76"]]; NSLog(@"Filter movies except given Ids : %@",[array filteredArrayUsingPredicate:filterByNotInIds]);
+        NSPredicate *filterByNotInIds = [NSPredicate predicateWithFormat:@"NOT (self.id IN %@)",@[@"7CDF6D22-8D36-49C2-84FE-E31EECCECB79", @"7CDF6D22-8D36-49C2-84FE-E31EECCECB76"]]; NSLog(@"Filte r movies except given Ids : %@",[array filteredArrayUsingPredicate:filterByNotInIds]);
         
         //*** Find all the objects which is of type movie, Both the syntax are valid ***
          NSPredicate *filterByMovieType = [NSPredicate predicateWithFormat:@"self.isMovie = %@",@1];
